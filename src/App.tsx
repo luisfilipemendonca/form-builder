@@ -3,6 +3,7 @@ import { theme } from './styles/theme';
 import GlobalStyle, { AppContainer } from './styles';
 import Visualizer from './layouts/Visualizer';
 import Configurator from './layouts/Configurator';
+import Sidepanel from './components/Sidepanel';
 
 const FormBuilder = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <AppContainer>
+        <Sidepanel />
         <FormBuilder />
       </AppContainer>
       <GlobalStyle />
