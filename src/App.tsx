@@ -3,6 +3,7 @@ import { theme } from './styles/theme';
 import GlobalStyle, { AppContainer } from './styles';
 import Visualizer from './layouts/Visualizer';
 import Configurator from './layouts/Configurator';
+import Inputs from './components/Inputs';
 
 const FormBuilder = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <AppContainer>
         <FormBuilder />
       </AppContainer>
+      <Inputs />
       <GlobalStyle />
     </ThemeProvider>
   );
