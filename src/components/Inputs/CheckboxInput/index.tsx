@@ -1,27 +1,21 @@
 import { forwardRef, InputHTMLAttributes } from 'react';
-import {
-  InputContainer,
-  InputContent,
-  InputError,
-  InputErrorContainer,
-  InputLabel,
-} from '../styled';
-import { Input } from './styled';
+import { InputContainer, InputError, InputErrorContainer } from '../styled';
+import { InputCheckbox, InputCheckboxLabel } from './styled';
 
-export interface NormalInputProps
+export interface CheckboxInputProps
   extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   errors: string[];
 }
 
-const NormalInput = forwardRef<HTMLInputElement, NormalInputProps>(
+const CheckboxInput = forwardRef<HTMLInputElement, CheckboxInputProps>(
   ({ label, errors, ...props }, ref) => {
     return (
       <InputContainer>
-        <InputLabel>{label}</InputLabel>
-        <InputContent>
-          <Input ref={ref} {...props} />
-        </InputContent>
+        <InputCheckboxLabel>
+          <InputCheckbox type="checkbox" {...props} ref={ref} />
+          {label}
+        </InputCheckboxLabel>
         <InputErrorContainer>
           {errors.length > 0 &&
             errors.map((error, index) => (
@@ -33,4 +27,4 @@ const NormalInput = forwardRef<HTMLInputElement, NormalInputProps>(
   }
 );
 
-export default NormalInput;
+export default CheckboxInput;

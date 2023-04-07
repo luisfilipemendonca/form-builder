@@ -1,3 +1,4 @@
+import CheckboxInput from './CheckboxInput';
 import NormalInput from './NormalInput';
 import Textarea from './TextareaInput';
 
@@ -14,6 +15,7 @@ const Inputs = () => {
         errors={['Um erro', 'Dois erros']}
         placeholder="Hello there"
       />
+      <CheckboxInput label="Um label" errors={['Um erro', 'Dois erros']} />
     </>
   );
 };
