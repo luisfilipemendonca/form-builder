@@ -14,6 +14,7 @@ export const SidepanelContent = styled.div`
   right: -100%;
   top: 0;
   bottom: 0;
+  padding: 20px;
 `;
 
 export const SidepanelContainer = styled.div`
@@ -67,3 +68,7 @@ export const SidepanelContainer = styled.div`
     transition: right 500ms linear;
   }
 `;
+
+export const SidepanelBackButtonContainer = styled.div``;
+
+export const SidepanelBackButton = styled.button``;

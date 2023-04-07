@@ -1,6 +1,8 @@
 import { FC, ReactNode, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import {
+  SidepanelBackButton,
+  SidepanelBackButtonContainer,
   SidepanelBackdrop,
   SidepanelContainer,
   SidepanelContent,
@@ -26,7 +28,14 @@ const Sidepanel: FC<SidepanelProps> = ({ isOpen, content, onCloseHandler }) => {
     >
       <SidepanelContainer ref={sidepanelRef}>
         <SidepanelBackdrop onClick={onCloseHandler} />
-        <SidepanelContent>{content}</SidepanelContent>
+        <SidepanelContent>
+          <SidepanelBackButtonContainer>
+            <SidepanelBackButton onClick={onCloseHandler}>
+              Fechar
+            </SidepanelBackButton>
+          </SidepanelBackButtonContainer>
+          {content}
+        </SidepanelContent>
       </SidepanelContainer>
     </CSSTransition>
   );
