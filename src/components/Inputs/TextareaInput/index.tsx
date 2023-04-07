@@ -20,7 +20,7 @@ const TextareaInput = forwardRef<HTMLTextAreaElement, TextareaProps>(
       <InputContainer>
         <InputLabel>{label}</InputLabel>
         <InputContent>
-          <Textarea></Textarea>
+          <Textarea ref={ref} {...props}></Textarea>
         </InputContent>
         <InputErrorContainer>
           {errors.length > 0 &&
